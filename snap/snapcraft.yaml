@@ -1,5 +1,6 @@
 name: wormhole
-version: '0.10.3'
+version: master
+version-script: git -C parts/wormhole/build describe --tags
 summary: get things from one computer to another, safely
 description: |
   This package provides a library and a command-line tool named wormhole, which
@@ -22,6 +23,15 @@ apps:
 
 parts:
   wormhole:
+    prepare: |
+      last_committed_tag="$(git describe --tags --abbrev=0)"
+      last_released_tag="$(snap info wormhole | awk '$1 == "beta:" { print $2 }')"
+      # If the latest tag from the upstream project has not been released to
+      # beta, build that tag instead of master.
+      if [ "${last_committed_tag}" != "${last_released_tag}" ]; then
+        git fetch
+        git checkout "${last_committed_tag}"
+      fi
     plugin: python
     python-version: python2
     source: https://github.com/warner/magic-wormhole.git
