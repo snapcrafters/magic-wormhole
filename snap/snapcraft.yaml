@@ -38,6 +38,8 @@ parts:
     plugin: python
     source: https://github.com/warner/magic-wormhole.git
     source-type: git
+    build-environment:
+      - CRYPTOGRAPHY_DONT_BUILD_RUST: "1"
     build-packages:
       - libffi-dev
       - libssl-dev
