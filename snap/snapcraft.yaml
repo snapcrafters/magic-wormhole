@@ -40,3 +40,5 @@ parts:
       - libffi-dev
       - libssl-dev
       - libsodium-dev
+      - rust-all
+      - pkg-config
