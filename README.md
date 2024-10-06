@@ -4,7 +4,7 @@
   Magic Wormhole
 </h1>
 
-<p align="center"><b>This is the snap for Magic Wormhole</b>, <i>“Get things from one computer to another, safely”</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
+<p align="center"><b>This is the snap for <a href="https://github.com/magic-wormhole/magic-wormhole">Magic Wormhole</a></b>, <i>“Get things from one computer to another, safely”</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
