@@ -9,11 +9,11 @@ description: |
   and displays the code, which must then be typed into the receiving machine.
 base: core24
 platforms:
-  - amd64:
-  - arm64:
-  - armhf:
-  - ppc64el:
-  - s390x:
+  amd64:
+  arm64:
+  armhf:
+  ppc64el:
+  s390x:
 grade: stable
 confinement: strict
 
