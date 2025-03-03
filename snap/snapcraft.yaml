@@ -13,6 +13,7 @@ platforms:
   arm64:
   armhf:
   ppc64el:
+  riscv64:
   s390x:
 grade: stable
 confinement: strict
